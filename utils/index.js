@@ -21,3 +21,4 @@ cd %ROOT%
 cd %DIR%
 
 `;
+console.log(driveup);

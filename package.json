@@ -1,6 +1,6 @@
 {
   "name": "driveup",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "fix lowercase dive letter issue on Windows",
   "bin": {
     "driveup": "./bin/driveup.cmd",
