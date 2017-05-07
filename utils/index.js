@@ -1,21 +1,23 @@
 const startChar='a'.charCodeAt(0);
 const stopChar='z'.charCodeAt(0);
-let driveup =`
-@echo off
+let driveup =
+`@echo off
 
-set ROOT=%CD:~0,3%
-set DRV=%CD%
+set DIR=%CD%
 
 `;
 
 for (let char = startChar; char <= stopChar; char++) {
     const drive = String.fromCharCode(char);
-    const hotfix = `set DRV=%DRV:${drive}:\=${drive.toUpperCase()}:\%`;
+    const hotfix = `set DIR=%DIR:${drive}:\=${drive.toUpperCase()}:\%`;
     driveup = `${driveup}${hotfix}\n`; 
 }
 
 driveup = `${driveup}
+
+set ROOT=%DIR:~0,3%
+
 cd %ROOT%
-cd %DRV%
+cd %DIR%
+
 `;
-console.log(driveup);

@@ -1,13 +1,13 @@
 {
   "name": "driveup",
-  "version": "0.9.1",
+  "version": "0.9.2",
   "description": "fix lowercase dive letter issue on Windows",
   "bin": {
     "driveup": "./bin/driveup.cmd",
     "startcmd": "./bin/startcmd.cmd"
   },
   "scripts": {
-    "buid": "node ./utils>./bin/driveup.cmd"
+    "prepublish": "node ./utils>./bin/driveup.cmd"
   },
   "repository": "https://github.com/sm-react/driveup",
   "author": "UsulPro",
